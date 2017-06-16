@@ -1,3 +1,6 @@
+v1.1.5
+Translation path now supports wp-content/languages - CHANGED
+
 v1.1.4
 Mobile menu sub items now open on main text click and not just arrow click - CHANGED
 Ultimate Member compatibility - ADDED

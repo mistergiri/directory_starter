@@ -12,7 +12,13 @@ function directory_theme_setup(){
 	 *
 	 * You may need this tool. https://poedit.net/
 	 */
-	load_theme_textdomain('directory-starter', get_template_directory() . '/languages');
+	$domain = 'directory-starter';
+	// wp-content/languages/theme-name/de_DE.mo
+	load_theme_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain );
+	// wp-content/themes/child-theme-name/languages/de_DE.mo
+	load_theme_textdomain( $domain, get_stylesheet_directory() . '/languages' );
+	// wp-content/themes/theme-name/languages/de_DE.mo
+	load_theme_textdomain( $domain, get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
